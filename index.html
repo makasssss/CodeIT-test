@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Registration</title>
+	<link rel="stylesheet"  type="text/css" href="css/style.css">
+	<script src="https://use.fontawesome.com/8bc5df3b3c.js"></script>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+
+	<section class="wrapper">
+		<div class="login">
+			<div class="signUp"><strong>Sign Up</strong></div>
+			<form id="registration" method="POST" action=""> 
+				<div class="field">
+					<div class="icon">
+						<i class="fa fa-user" aria-hidden="true"></i>
+					</div>
+					<label for="name"></label>
+					<input type="text" name="name" placeholder="Username" form="registration" required>
+				</div>
+ 
+				<div class="field">
+					<div class="icon">
+						<i class="fa fa-user" aria-hidden="true"></i>
+					</div>
+					<label for="secondname"></label>
+					<input type="text" name="secondname" placeholder="Username" form="registration" required>
+				</div>
+
+				<div class="field">
+					<div class="icon">
+						<i class="fa fa-envelope-o" aria-hidden="true"></i>
+					</div>
+					<label for="email"></label>
+					<input type="email" name="email" placeholder="Email" form="registration" required>
+				</div>
+
+				<div class="field">
+					<label for="gender"></label>
+					<select name="gender" size="1" form="registration" required>
+						<option value="male">Male</option>
+						<option value="female">Female</option>
+					</select>
+				</div>
+
+				<div class="field">
+					<div class="icon">
+						<i class="fa fa-asterisk" aria-hidden="true"></i>
+					</div>
+					<label for="pass"></label>
+					<input type="password" name="pass" placeholder="Password" form="registration" required>
+				</div>
+
+				<div class="check">
+					<label for="agree"></label>
+					<input  class="checkbox" type="checkbox" name="agree" form="registration" required>
+					Conditions of Agreement
+				</div>
+
+				<div class="button">
+					<input type="button" value="Send" onclick="AjaxFormRequest('results', 'registration', 'http://codeit.pro/frontTestTask/user/registration')" />
+
+			</form>
+		</div>
+	</section>
+
+	<div id="results"></div>
+
+
+	<script type="text/javascript" src="js/reg.js"></script>
+</body>
+</html>
